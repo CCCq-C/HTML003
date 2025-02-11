@@ -1,0 +1,61 @@
+/* 承诺板块样式 */
+.section-promise {
+    width: 100%;
+    min-height: auto; /* 移除固定高度限制 */
+    background-color: #000;
+    padding: 40px 8vw 20px; /* 减小上下padding，特别是底部 */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.promise-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+.promise-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.promise-text {
+    font-size: clamp(1rem, 2vw, 1.4rem); /* 减小字体大小 */
+    color: #ffffff;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+}
+
+.highlight {
+    color: #FFD700;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    .section-promise {
+        padding: calc(8vh + 20px) 5vw;
+        gap: 30px;
+    }
+}
+
+/* 横屏模式优化 */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .section-promise {
+        padding: 40px 5vw;
+        min-height: auto;
+    }
+}

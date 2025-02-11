@@ -1,0 +1,126 @@
+/* 关于我们板块样式 */
+.section-about {
+    width: 100%;
+    min-height: auto;
+    background-color: #000;
+    padding: 40px 8vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+.about-content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 5vw;
+}
+
+.about-text-container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    text-align: left;
+}
+
+.about-text {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #ffffff;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+
+.about-text:last-child {
+    margin-bottom: 0;
+}
+
+.about-image-section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.method-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.method-caption {
+    color: #ffffff;
+    font-size: min(4vw, 2rem); /* 使用min()函数确保字体大小不会过大 */
+    text-align: center;
+    letter-spacing: 0.02em;
+    white-space: nowrap; /* 防止换行 */
+    width: 100%;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 1024px) {
+    .about-content-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-text-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-about {
+        padding: 30px 5vw;
+        gap: 20px;
+    }
+
+    .about-text {
+        font-size: 1.2rem;
+    }
+
+    .about-image-section {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .method-caption {
+        font-size: 1rem;
+    }
+}
+
+/* 横屏模式优化 */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .section-about {
+        padding: 40px 5vw;
+        min-height: auto;
+    }
+}

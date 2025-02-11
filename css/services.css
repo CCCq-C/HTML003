@@ -1,0 +1,116 @@
+/* 服务板块样式 */
+.section-services {
+    width: 100%;
+    background-color: #000;
+    padding: 60px 8vw 40px; /* 增加顶部间距 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.services-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.1em; /* 增加字间距 */
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px; /* 为下划线留出空间 */
+}
+
+.services-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(255,215,0,0.8), rgba(255,255,255,0.8)); /* 渐变下划线 */
+    border-radius: 2px;
+}
+
+/* 添加标题悬停效果 */
+.services-title:hover::after {
+    width: 80px;
+    transition: width 0.3s ease;
+}
+
+.services-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* PC端3列 */
+    gap: 20px;
+    max-width: 1200px; /* 限制最大宽度 */
+    margin: 0 auto;
+}
+
+.service-item {
+    aspect-ratio: 1/1; /* 保持1:1比例 */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* 增大字体大小 */
+    text-align: center;
+    white-space: nowrap;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.8),  /* 右下阴影 */
+        -2px -2px 4px rgba(0, 0, 0, 0.8), /* 左上阴影 */
+        2px -2px 4px rgba(0, 0, 0, 0.8),  /* 右上阴影 */
+        -2px 2px 4px rgba(0, 0, 0, 0.8),  /* 左下阴影 */
+        0 0 8px rgba(0, 0, 0, 0.9);       /* 整体阴影 */
+    font-weight: 600; /* 加粗文字 */
+    letter-spacing: 0.05em; /* 增加字间距 */
+}
+
+/* 添加悬停效果 */
+.service-item:hover .service-text {
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: transform 0.3s ease;
+    text-shadow: 
+        2px 2px 6px rgba(0, 0, 0, 0.9),
+        -2px -2px 6px rgba(0, 0, 0, 0.9),
+        2px -2px 6px rgba(0, 0, 0, 0.9),
+        -2px 2px 6px rgba(0, 0, 0, 0.9),
+        0 0 12px rgba(0, 0, 0, 1);
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    .section-services {
+        padding: 30px 5vw;
+        gap: 30px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 手机端2列 */
+        gap: 15px;
+    }
+
+    .service-text {
+        font-size: clamp(1rem, 4vw, 1.4rem); /* 移动端适配字体大小 */
+    }
+}
+
+/* 确保在更小的屏幕上文字仍然清晰可见 */
+@media screen and (max-width: 480px) {
+    .services-grid {
+        gap: 10px;
+    }
+}
