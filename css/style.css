@@ -15,6 +15,83 @@ body {
     padding: 20px;
 }
 
+/* 全局背景设置 */
+body {
+    position: relative;
+    background-color: #000;
+}
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* 背景层级管理 */
+.section-promise,
+.section-about,
+.section-services {
+    position: relative;
+    z-index: 1;
+}
+
+/* 承诺和关于我们板块背景 */
+.section-promise::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/我们的承诺下边底纹.png');
+    background-size: 100% auto;
+    background-position: center 30vh;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    filter: brightness(1.5);
+    pointer-events: none;
+    z-index: -1;
+    transform: translateZ(0); /* 启用GPU加速 */
+}
+
+/* 服务板块背景 */
+.section-services::before,
+.section-services::after {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.8;
+    filter: brightness(1.5);
+    pointer-events: none;
+    z-index: -1;
+    transform: translateZ(0); /* 启用GPU加速 */
+}
+
+.section-services::before {
+    top: 0;
+    left: 0;
+    background-image: url('../images/6个框 底纹.png');
+    background-size: 60% auto;
+    background-position: left 60vh;
+    background-repeat: no-repeat;
+}
+
+.section-services::after {
+    bottom: 0;
+    right: 0;
+    background-image: url('../images/6ge 框底纹2.png');
+    background-size: 60% auto;
+    background-position: right 80vh;
+    background-repeat: no-repeat;
+}
+
 /* 页头样式 */
 header {
     text-align: center;
@@ -50,6 +127,17 @@ p {
     margin-bottom: 15px;
 }
 
+/* 通用图片样式 */
+.centered-image {
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center;
+}
+
 /* 页脚样式 */
 footer {
     text-align: center;
@@ -60,7 +148,7 @@ footer {
 }
 
 /* 响应式设计 */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     body {
         padding: 10px;
     }
@@ -72,4 +160,30 @@ footer {
     header h1 {
         font-size: 2em;
     }
+    
+    .section-promise::before {
+        background-size: 120% auto;
+        background-position: center 40vh;
+        opacity: 0.6;
+    }
+    
+    .section-services::before,
+    .section-services::after {
+        background-size: 80% auto;
+        opacity: 0.6;
+    }
+    
+    .section-services::before {
+        background-position: left 70vh;
+    }
+    
+    .section-services::after {
+        background-position: right 90vh;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media screen and (min-width: 769px) {
 }

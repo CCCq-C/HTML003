@@ -1,17 +1,13 @@
 /* 关于我们板块样式 */
 .section-about {
-    width: 100%;
-    min-height: auto;
     background-color: #000;
     padding: 40px 8vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 30px;
+}
+
+.about-text-container, .about-why-us {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 40px;
 }
 
 .about-title {
@@ -19,7 +15,23 @@
     color: #ffffff;
     font-weight: 600;
     letter-spacing: 0.05em;
-    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about-subtitle {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-bottom: 15px;
+}
+
+.about-text {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #ffffff;
+    line-height: 1.8;
+    opacity: 0.8;
+    margin-bottom: 15px;
 }
 
 .about-content-wrapper {
@@ -32,45 +44,12 @@
     gap: 5vw;
 }
 
-.about-text-container {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 30px;
-    width: 100%;
-    text-align: left;
-}
-
-.about-text {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    color: #ffffff;
-    line-height: 1.8;
-    opacity: 0.8;
-}
-
-.about-text:last-child {
-    margin-bottom: 0;
-}
-
 .about-image-section {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-}
-
-.method-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
 
 .method-caption {
@@ -80,6 +59,59 @@
     letter-spacing: 0.02em;
     white-space: nowrap; /* 防止换行 */
     width: 100%;
+}
+
+/* 案例展示板块样式 */
+.section-cases {
+    background-color: #000;
+    padding: 40px 0;
+}
+
+.cases-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.case-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.case-item img.centered-image {
+    max-width: min(90%, 800px);
+    height: auto;
+}
+
+.achievement-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.achievement-item {
+    color: #ffffff;
+    font-size: clamp(0.9rem, 1.8vw, 1.3rem);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.testimonial-quote {
+    color: #ffffff;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    line-height: 1.8;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.9;
 }
 
 /* 响应式设计 */
@@ -98,9 +130,13 @@
 }
 
 @media screen and (max-width: 768px) {
-    .section-about {
+    .section-about, .section-cases {
         padding: 30px 5vw;
-        gap: 20px;
+    }
+
+    .cases-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .about-text {
@@ -114,6 +150,21 @@
 
     .method-caption {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-about, .section-cases {
+        padding: 30px 5vw;
+    }
+
+    .cases-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-text {
+        font-size: 1.2rem;
     }
 }
 

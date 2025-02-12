@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="css/our-services.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/partners.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- 引入字体图标 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- 导航栏 -->
@@ -29,6 +33,8 @@
             <a href="#section-about" class="nav-item">关于我们</a>
             <a href="#section-services" class="nav-item">服务概览</a>
             <a href="#section-our-services" class="nav-item">服务详情</a>
+            <a href="#section-partners" class="nav-item">合作伙伴</a>
+            <a href="#section-contact" class="nav-item">联系我们</a>
         </div>
     </nav>
 
@@ -46,33 +52,57 @@
         </div>
     </section>
 
-    <!-- 承诺板块 -->
-    <section class="section-promise">
-        <h2 class="promise-title">我们的承诺</h2>
-        <div class="promise-content">
-            <p class="promise-text">说实话，做实事，一起走更远的路</p>
-            <p class="promise-text">我们拒绝浅层服务交易，专注与合作伙伴构建<span class="highlight">深度战略绑定关系</span></p>
-        </div>
-    </section>
+   <!-- 承诺板块 -->
+   <section class="section-promise">
+    <h2 class="promise-title">我们的承诺</h2>
+    <div class="promise-content">
+        <p class="promise-text">说实话，做实事，一起走更远的路</p>
+        <p class="promise-text">我们拒绝浅层服务交易，专注与合作伙伴构建<span class="highlight">深度战略绑定关系</span></p>
+    </div>
+</section>
 
     <!-- 关于我们板块 -->
-    <section class="section-about" id="section-about">
-        <h2 class="about-title">我们是谁</h2>
-        <div class="about-content-wrapper">
+    <section class="section-about section-base" id="section-about">
+        <div class="container-base">
             <div class="about-text-container">
+                <h2 class="about-title">我们是谁？</h2>
                 <p class="about-text">小黄城堡诞生于中国数字化浪潮之中，始终专注于为品牌提供「品效销一体化」的线上解决方案。</p>
                 <p class="about-text">长期为多家合作伙伴定制内容创意、广告投放、直播运营与私域转化四大核心模块，助力品牌「低成本获客，高质量增长」。</p>
                 <p class="about-text">我们紧贴AIGC浪潮，结合传统视频特效剪辑方式，为品牌方提供「极致性价比的优质视频」。</p>
             </div>
-        </div>
-        <div class="about-image-section">
-            <img src="images/3一.png" alt="增长方法论" class="method-image">
-            <p class="method-caption">被验证的增长方法论（五年合作案例）</p>
+            
+            <div class="about-why-us">
+                <h2 class="about-title">为什么选择我们</h2>
+                <h3 class="about-subtitle">与您共同成长的伙伴关系</h3>
+                <p class="about-text">• 不止于服务商，更是与品牌方风险共担、利益共享的长期战略伙伴</p>
+            </div>
         </div>
     </section>
 
-    <!-- 服务板块 -->
-    <section class="section-services" id="section-services">
+    <!-- 案例展示板块 -->
+    <section class="section-cases section-base">
+        <div class="container-base">
+            <div class="cases-wrapper">
+                <div class="case-item">
+                    <img src="images/3一.png" alt="增长方法论" class="centered-image">
+                    <p class="method-caption">被验证的增长方法论（五年合作案例）</p>
+                    <div class="achievement-list">
+                        <p class="achievement-item">▸ 2019年携手清北道远从0构建线上营销和私域体系，首年创收超千万</p>
+                        <p class="achievement-item">▸ 2021年布局兴趣电商赛道，两年实现单品销量破亿，登顶抖音高中教辅书排行榜。</p>
+                        <p class="achievement-item">▸ 2024年 新品上线全平台布局，单品年GMV突破三亿。</p>
+                    </div>
+                </div>
+
+                <div class="case-item">
+                    <img src="images/客户这样说.png" alt="客户反馈" class="centered-image">
+                    <p class="testimonial-quote">"和小黄城堡合作像多了一支王牌线上团队，半年时间协助我们新品冲进品类TOP3"<br>——某上市教育品牌电商负责人</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- 服务板块 -->
+     <section class="section-services" id="section-services">
         <h2 class="services-title">全链路线上推广与销售转化</h2>
         <div class="services-grid">
             <div class="service-item">
@@ -101,6 +131,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- 我们的服务板块 -->
     <section class="section-our-services" id="section-our-services">
@@ -200,6 +231,73 @@
             </div>
         </div>
     </section>
+
+    <!-- 合作伙伴板块 -->
+    <section class="section-partners" id="section-partners">
+        <!-- <h2 class="partners-title">合作伙伴</h2> -->
+        <div class="partners-image-container">
+            <img src="images/合作伙伴.png" alt="我们的合作伙伴" class="partners-image" draggable="false">
+        </div>
+    </section>
+
+    <!-- 联系我们板块 -->
+    <section class="section-contact" id="section-contact">
+        <h2 class="contact-title">联系我们</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <a href="mailto:k@daoyuanketang.com" class="contact-email">
+                    <i class="fas fa-envelope"></i>
+                    k@daoyuanketang.com
+                </a>
+            </div>
+            <div class="map-container" id="baiduMap"></div>
+        </div>
+    </section>
+
+    <!-- 百度地图API -->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=61ncdlPg8EMXzUdKZq9RPy8XIid01POT"></script>
+    <script type="text/javascript">
+        // 等待页面加载完成
+        window.addEventListener('load', function() {
+            // 创建百度地图实例
+            var map = new BMap.Map("baiduMap");
+            // 创建点坐标
+            var point = new BMap.Point(116.287704, 40.009165);
+            // 初始化地图，设置中心点坐标和地图级别
+            map.centerAndZoom(point, 16);
+            
+            // 添加地图控件
+            map.addControl(new BMap.NavigationControl({
+                type: BMAP_NAVIGATION_CONTROL_LARGE,  // 完整的平移缩放控件
+                anchor: BMAP_ANCHOR_TOP_LEFT,        // 控件位置
+                offset: new BMap.Size(10, 10)        // 控件偏移
+            }));
+            
+            // 添加比例尺控件
+            map.addControl(new BMap.ScaleControl({
+                anchor: BMAP_ANCHOR_BOTTOM_LEFT,
+                offset: new BMap.Size(10, 10)
+            }));
+            
+            // 启用鼠标滚轮缩放
+            map.enableScrollWheelZoom(true);
+            // 添加标记点
+            var marker = new BMap.Marker(point);
+            map.addOverlay(marker);
+            // 添加信息窗口
+            var infoWindow = new BMap.InfoWindow("北京市海淀区颐和园路100号", {
+                width: 260,  // 信息窗口宽度
+                height: 40,  // 信息窗口高度
+                title: "",   // 不显示标题
+                enableMessage: false // 不显示发送到手机按钮
+            });
+            marker.addEventListener("click", function(){
+                map.openInfoWindow(infoWindow, point);
+            });
+            // 默认打开信息窗口
+            map.openInfoWindow(infoWindow, point);
+        });
+    </script>
 
     <script src="js/main.js"></script>
     <script src="js/nav.js"></script>

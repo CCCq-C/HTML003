@@ -12,6 +12,34 @@
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 30px;
+    position: relative; /* 添加相对定位 */
+    overflow: hidden; /* 防止背景图溢出 */
+}
+
+/* 背景图片容器 */
+.promise-bg-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    pointer-events: none; /* 防止图片影响交互 */
+}
+
+.promise-bg-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 1; /* 调整透明度为1 */
+    filter: brightness(1.5); /* 增加亮度 */
+}
+
+/* 确保内容在背景之上 */
+.promise-title,
+.promise-content {
+    position: relative;
+    z-index: 2;
 }
 
 .promise-title {
