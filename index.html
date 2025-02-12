@@ -7,7 +7,9 @@
     <meta name="format-detection" content="telephone=no,email=no,address=no">
     <meta name="renderer" content="webkit">
     <title>小黄城堡 - 数字营销战略伙伴</title>
-    <!-- 引入CSS文件 -->
+   <!-- 引入思源黑体 -->
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+   <!-- 引入CSS文件 -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/promise.css">
@@ -17,12 +19,22 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/partners.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/animations.css">
     <!-- 引入字体图标 -->
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .highlight {
+            color: #ffffff;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    <!-- 添加滚动进度条 -->
+    <div class="scroll-progress"></div>
+    
     <!-- 导航栏 -->
-    <nav class="nav-container">
+    <nav class="nav-container animate-on-scroll">
         <button class="menu-toggle">
             <span></span>
             <span></span>
@@ -39,7 +51,7 @@
     </nav>
 
     <!-- 首页板块 -->
-    <section class="section-home" id="section-home">
+    <section class="section-home animate-on-scroll" id="section-home">
         <img src="images/背景备选1.png" alt="背景图片" class="bg-image" draggable="false">
         <div class="content-wrapper">
             <div class="logo-container">
@@ -62,19 +74,19 @@
 </section>
 
     <!-- 关于我们板块 -->
-    <section class="section-about section-base" id="section-about">
+    <section class="section-about section-base animate-on-scroll" id="section-about">
         <div class="container-base">
             <div class="about-text-container">
                 <h2 class="about-title">我们是谁？</h2>
-                <p class="about-text">小黄城堡诞生于中国数字化浪潮之中，始终专注于为品牌提供「品效销一体化」的线上解决方案。</p>
-                <p class="about-text">长期为多家合作伙伴定制内容创意、广告投放、直播运营与私域转化四大核心模块，助力品牌「低成本获客，高质量增长」。</p>
-                <p class="about-text">我们紧贴AIGC浪潮，结合传统视频特效剪辑方式，为品牌方提供「极致性价比的优质视频」。</p>
+                <p class="about-text">小黄城堡诞生于中国数字化浪潮之中，始终专注于为品牌提供<span class="highlight">「品效销一体化」的线上解决方案</span></p>
+                <p class="about-text">长期为多家合作伙伴定制内容创意、广告投放、直播运营与私域转化四大核心模块，<span class="highlight">助力品牌「低成本获客，高质量增长」</span></p>
+                <p class="about-text">我们紧贴AIGC浪潮，结合传统视频特效剪辑方式，<span class="highlight">为品牌方提供「极致性价比的优质视频」</span></p>
             </div>
             
             <div class="about-why-us">
                 <h2 class="about-title">为什么选择我们</h2>
                 <h3 class="about-subtitle">与您共同成长的伙伴关系</h3>
-                <p class="about-text">• 不止于服务商，更是与品牌方风险共担、利益共享的长期战略伙伴</p>
+                <p class="about-text">• 不止于服务商，更是与品牌方<span class="highlight">风险共担、利益共享</span>的长期战略伙伴</p>
             </div>
         </div>
     </section>
@@ -87,9 +99,9 @@
                     <img src="images/3一.png" alt="增长方法论" class="centered-image">
                     <p class="method-caption">被验证的增长方法论（五年合作案例）</p>
                     <div class="achievement-list">
-                        <p class="achievement-item">▸ 2019年携手清北道远从0构建线上营销和私域体系，首年创收超千万</p>
-                        <p class="achievement-item">▸ 2021年布局兴趣电商赛道，两年实现单品销量破亿，登顶抖音高中教辅书排行榜。</p>
-                        <p class="achievement-item">▸ 2024年 新品上线全平台布局，单品年GMV突破三亿。</p>
+                        <p class="achievement-item">▸ 2019年携手清北道远从0构建线上营销和私域体系，<span class="highlight">首年创收超千万</span></p>
+                        <p class="achievement-item">▸ 2021年布局兴趣电商赛道，两年实现<span class="highlight">单品销量破亿</span>，登顶抖音高中教辅书排行榜</p>
+                        <p class="achievement-item">▸ 2024年 新品上线全平台布局，<span class="highlight">单品年GMV突破三亿</span></p>
                     </div>
                 </div>
 
@@ -102,30 +114,30 @@
     </section>
 
      <!-- 服务板块 -->
-     <section class="section-services" id="section-services">
+     <section class="section-services animate-on-scroll" id="section-services">
         <h2 class="services-title">全链路线上推广与销售转化</h2>
         <div class="services-grid">
-            <div class="service-item">
+            <div class="service-item animate-on-scroll">
                 <img src="images/01/品牌推广.png" alt="品牌推广" class="service-image">
                 <div class="service-text">品牌推广</div>
             </div>
-            <div class="service-item">
+            <div class="service-item animate-on-scroll">
                 <img src="images/01/IP孵化.png" alt="IP孵化" class="service-image">
                 <div class="service-text">IP孵化</div>
             </div>
-            <div class="service-item">
+            <div class="service-item animate-on-scroll">
                 <img src="images/01/原创视频.png" alt="原创视频与文案" class="service-image">
                 <div class="service-text">原创视频与文案</div>
             </div>
-            <div class="service-item">
+            <div class="service-item animate-on-scroll">
                 <img src="images/01/直播带货.png" alt="直播带货" class="service-image">
                 <div class="service-text">直播带货</div>
             </div>
-            <div class="service-item">
+            <div class="service-item animate-on-scroll">
                 <img src="images/01/店铺运营.png" alt="全平台店铺运营" class="service-image">
                 <div class="service-text">全平台店铺运营</div>
             </div>
-            <div class="service-item">
+            <div class="service-item animate-on-scroll">
                 <img src="images/01/私域.png" alt="私域管理与电销" class="service-image">
                 <div class="service-text">私域管理与电销</div>
             </div>
@@ -233,7 +245,7 @@
     </section>
 
     <!-- 合作伙伴板块 -->
-    <section class="section-partners" id="section-partners">
+    <section class="section-partners animate-on-scroll" id="section-partners">
         <!-- <h2 class="partners-title">合作伙伴</h2> -->
         <div class="partners-image-container">
             <img src="images/合作伙伴.png" alt="我们的合作伙伴" class="partners-image" draggable="false">
@@ -241,7 +253,7 @@
     </section>
 
     <!-- 联系我们板块 -->
-    <section class="section-contact" id="section-contact">
+    <section class="section-contact animate-on-scroll" id="section-contact">
         <h2 class="contact-title">联系我们</h2>
         <div class="contact-content">
             <div class="contact-info">
@@ -301,5 +313,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>

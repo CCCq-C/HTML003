@@ -7,6 +7,8 @@
     z-index: 1000;
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: flex-end; /* 将菜单按钮放到右边 */
 }
 
 /* PC端导航样式 */
@@ -24,6 +26,7 @@
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
+    position: relative; /* 添加相对定位 */
 }
 
 .nav-item:hover {
@@ -57,6 +60,7 @@
     cursor: pointer;
     padding: 0;
     z-index: 1001;
+    margin-left: auto; /* 确保按钮在右侧 */
 }
 
 .menu-toggle span {
@@ -90,17 +94,18 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 50vh; /* 改为半屏高度 */
+        height: 100vh; /* 使用全屏高度 */
         background-color: rgba(0, 0, 0, 0.95);
         flex-direction: column;
         justify-content: center;
+        align-items: center; /* 确保水平居中 */
         transform: translateY(-100%);
         opacity: 0;
         pointer-events: none;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        padding: 60px 20px; /* 添加内边距避免内容贴边 */
+        overflow-y: auto; /* 允许滚动 */
+        -webkit-overflow-scrolling: touch; /* iOS滚动优化 */
     }
 
     .nav-menu.active {
@@ -111,21 +116,17 @@
 
     .nav-item {
         font-size: 1.2rem;
-        padding: 0.8rem 2rem;
-        width: 100%;
+        padding: 1rem 2rem;
+        margin: 0.5rem 0; /* 增加垂直间距 */
+        width: auto; /* 移除宽度限制 */
         text-align: center;
-        position: relative;
+        white-space: nowrap; /* 防止文字换行 */
     }
 
     .nav-item::after {
-        content: '';
-        position: absolute;
         left: 50%;
-        bottom: 0;
+        bottom: 5px;
         width: 0;
-        height: 2px;
-        background-color: #ffd700;
-        transition: all 0.3s ease;
         transform: translateX(-50%);
     }
 
@@ -133,16 +134,42 @@
         width: 50%;
     }
 
-    /* 添加滑动手势指示器 */
+    /* 优化滑动手势指示器 */
     .nav-menu::after {
         content: '';
         position: absolute;
-        bottom: 10px;
+        bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
         width: 40px;
         height: 4px;
         background-color: rgba(255, 255, 255, 0.3);
         border-radius: 2px;
+    }
+
+    /* 防止body滚动 */
+    body.nav-active {
+        overflow: hidden;
+    }
+}
+
+/* 适配超小屏幕 */
+@media screen and (max-width: 320px) {
+    .nav-item {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* 适配横屏模式 */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .nav-menu {
+        height: 100vh;
+        padding: 40px 20px;
+    }
+
+    .nav-item {
+        padding: 0.6rem 1.5rem;
+        margin: 0.3rem 0;
     }
 }

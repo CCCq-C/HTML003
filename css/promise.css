@@ -63,7 +63,7 @@
 
 .promise-text {
     font-size: clamp(1rem, 2vw, 1.4rem); /* 减小字体大小 */
-    color: #ffffff;
+    color: #dedede;
     line-height: 1.8;
     letter-spacing: 0.02em;
 }
